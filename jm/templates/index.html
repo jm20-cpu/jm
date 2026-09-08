@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>J&M Capital — Data. Markets. Commerce.</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="ticker"><div id="tickerTrack">● LIVE DATA <span>Loading market feed…</span></div></div>
+<nav class="nav">
+  <a class="brand" href="#"><span class="brandmark">J&M</span><span><b>J&M Capital</b><small>Driven by Data. Powered by Mathematics.</small></span></a>
+  <div class="navlinks">
+    <a href="#marketplace">Marketplace</a><a href="#markets">Markets</a><a href="#analytics">Analytics</a><a href="#ai">AI</a><a href="#academy">Academy</a>
+  </div>
+  <button class="btn ghost" onclick="openModal('login')">Sign in</button>
+  <button class="btn primary" onclick="openModal('sell')">Sell an item</button>
+</nav>
+
+<header class="hero">
+ <div class="hero-copy">
+  <div class="eyebrow">KENYA'S DATA-DRIVEN COMMERCE & INTELLIGENCE PLATFORM</div>
+  <h1>Find better prices.<br><em>Make smarter decisions.</em></h1>
+  <p>J&M Capital brings marketplace price intelligence, business analytics and financial market tools into one modern platform.</p>
+  <div class="hero-actions"><a class="btn primary big" href="#marketplace">Explore marketplace →</a><a class="btn ghost big" href="#markets">View live markets</a></div>
+  <div class="trust"><span>✓ Price comparison</span><span>✓ Verified sellers</span><span>✓ Real-time updates</span></div>
+ </div>
+ <div class="hero-card">
+   <div class="card-head"><span>J&M Intelligence</span><span class="live">● LIVE</span></div>
+   <div class="metric"><small>Marketplace listings</small><strong id="listingCount">—</strong><span>active data</span></div>
+   <div class="chart" id="miniChart"></div>
+   <div class="card-row"><span>Market signal</span><b>Data-backed</b></div>
+   <div class="card-row"><span>Updated</span><b id="updated">—</b></div>
+ </div>
+</header>
+
+<section class="section" id="marketplace">
+ <div class="section-title"><div><span class="eyebrow">J&M MARKETPLACE</span><h2>Shop with price intelligence.</h2></div><p>Search products, compare prices and understand the market before you buy.</p></div>
+ <div class="searchbox"><span>⌕</span><input id="search" placeholder="Search phones, laptops, furniture, electronics…" oninput="loadProducts()"><select id="category" onchange="loadProducts()"><option>All</option><option>Phones & Tablets</option><option>Computers & Laptops</option><option>Electronics</option><option>Furniture</option><option>Sports & Fitness</option><option>Home & Energy</option></select></div>
+ <div class="toolbar"><b id="resultLabel">Featured listings</b><span id="marketSummary"></span></div>
+ <div id="products" class="product-grid"></div>
+</section>
+
+<section class="dark-section" id="markets">
+ <div class="section-title"><div><span class="eyebrow">J&M MARKETS</span><h2>Live market intelligence.</h2></div><p>Demo live-feed interface ready to connect to licensed market-data APIs.</p></div>
+ <div id="marketCards" class="market-grid"></div>
+ <div class="disclaimer">Market figures displayed by this demo are illustrative. Connect verified/licensed data providers before using for financial decisions.</div>
+</section>
+
+<section class="section" id="analytics">
+ <div class="section-title"><div><span class="eyebrow">ANALYTICS</span><h2>Turn information into decisions.</h2></div></div>
+ <div class="feature-grid">
+  <article><span class="icon">◒</span><h3>Price intelligence</h3><p>Lowest, highest, average and median prices, market positioning and historical trends.</p></article>
+  <article><span class="icon">▦</span><h3>Business dashboards</h3><p>Track sales, inventory, margins, customers, fast movers and profitability.</p></article>
+  <article><span class="icon">⌁</span><h3>Statistical analysis</h3><p>Forecasting, distributions, trends and transparent data-quality indicators.</p></article>
+  <article><span class="icon">↗</span><h3>Portfolio intelligence</h3><p>Watchlists, returns, risk metrics and research-oriented market tools.</p></article>
+ </div>
+</section>
+
+<section class="ai-section" id="ai">
+ <div class="ai-inner"><div><span class="eyebrow">J&M AI</span><h2>Intelligence that works with your data.</h2><p>AI tools can help sellers write listings, estimate price ranges, compare products and summarize supplied business or market data.</p><button class="btn primary" onclick="openModal('ai')">Try AI assistant</button></div>
+ <div class="ai-panel"><div class="ai-line">J&M AI <span>● READY</span></div><div class="bubble">Compare two laptops for a statistics student under KSh 70,000.</div><div class="bubble answer">I can compare price, specifications, value signals and seller information. <b>Connect your data source to begin.</b></div><div class="ai-input">Ask J&M anything… <span>→</span></div></div></div>
+</section>
+
+<section class="section" id="academy">
+ <div class="section-title"><div><span class="eyebrow">J&M ACADEMY</span><h2>Build skills for the data economy.</h2></div></div>
+ <div class="courses"><div>Python <b>Data Analysis</b></div><div>SQL <b>Analytics</b></div><div>Statistics <b>Probability</b></div><div>Finance <b>Markets</b></div><div>Power BI <b>Dashboards</b></div></div>
+</section>
+
+<footer><div class="brand footerbrand"><span class="brandmark">J&M</span><span><b>J&M Capital</b><small>Driven by Data. Powered by Mathematics.</small></span></div><p>Commerce • Analytics • Markets • AI • Education</p><span>© 2026 J&M Capital — Working platform concept.</span></footer>
+
+<div id="modal" class="modal" onclick="if(event.target===this)closeModal()"><div class="modalbox"><button class="x" onclick="closeModal()">×</button><div id="modalContent"></div></div></div>
+<script src="/static/app.js"></script>
+</body></html>

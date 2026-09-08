@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: jm-capital
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
